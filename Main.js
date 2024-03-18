@@ -133,7 +133,7 @@ function caromScoreNewGame () {
     newGame();
     getNumPlayers();
 
-    if (document.getElementById("lblNumPlayers").innerHTML == "2Players") {window.location.href = "CaromScore2p.html"}
+    if (document.getElementById("lblNumPlayers").innerHTML == "2Players") {window.location.href = "/CaromScore2p.html"}
     else if (document.getElementById("lblNumPlayers").innerHTML == "3Players") {}
     else if (document.getElementById("lblNumPlayers").innerHTML == "3Players") {}
     
