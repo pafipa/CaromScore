@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaromScore</title>
+    <link rel="stylesheet" href="CaromScore2P.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="Favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="Favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicons/favicon-16x16.png">
+    <link rel="manifest" href="Favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body onload="onLoadCaromScore2P()">
+    <div class="grid">
+        <header>
+            <div id="contInsideHeader1" class="contInsideHeader">
+                <img id="btnBack" src="Iconos/Omat/icon-back-330.png" class="imgBigButtons" alt="" onclick="redirectToCaromScore()">
+                <img id="btnStop" src="Iconos/Omat/icon-stop-330.png" class="imgBigButtons" alt="">
+            </div>
+            <div id="contInsideHeader2" class="contInsideHeader">
+                <img id="btnChangePlayers" src="Iconos/Omat/icon-change-330.png" class="imgBigButtons" alt="">
+                <img id="imgCaromScore2P" src="Imagenes/CaromScore celeste.png" alt="">
+            </div>
+            <div id="contInsideHeader3" class="contInsideHeader">
+                <img id="btnEdit" src="Iconos/Omat/icon-edit330.png" class="imgBigButtons" onclick="editOn()" alt="">
+                <img id="btnStopEdit" src="Iconos/Omat/icon-stopEdit330.png" class="imgBigButtons" onclick="editOff()" alt="">
+            </div>
+        </header>
+        
+        
+        <aside class="sideBarLeft">
+            <div id="area1" class="contArea">
+                <div id="areaPlayer1" class="contPlayer">
+                    <div id="cont1" class="cont"> 
+                        <label id="lblNamePlayer1" class="lblPlayerName"></label>
+                    </div>
+                    <div id="cont2" class="cont"> 
+                        <img id="btnIncreasePoints1" src="Iconos/Omat/icon-up-330.png" class="imgBigButtons" onclick="increasePoints1(); averagePlayer1()" alt="">
+                    </div>
+                    <div id="cont3" class="cont">
+                        <img id="imgBallPlayer1" class="imgBola" alt="">
+                        <label id="lblRunPlayer1" class="lblRun"></label>
+                    </div>
+                    <div id="cont4" class="cont"> 
+                        <img id="btnDecreasePoints1" src="Iconos/Omat/icon-down-330.png" class="imgBigButtons" onclick="decreasePoints1(); averagePlayer1()" alt="">
+                    </div>
+                    <div id="cont8" class="cont"> 
+                        <label id="lblInningsPlayer1" class="lblPlayerData"></label>
+                    </div>
+                    <div id="cont5" class="cont"> 
+                        <img src="Iconos/Omat/icon-star.svg" class="imgSmallIcons" alt="">
+                        <label id="lblHighestRunPlayer1" class="lblPlayerData"></label>
+                    </div>
+                    <div id="cont6" class="cont"> 
+                        <label id="lblAveragePlayer1" class="lblPlayerData"></label>
+                    </div>
+                    <div id="cont7" class="cont"> 
+                        <label id="lblTimeoutsPlayer1" class="lblPlayerData"></label>
+                        <img src="Iconos/Omat/icon-timeout.svg" class="imgSmallIcons" alt="">
+                    </div>
+                    <div id="cont10" class="cont" onclick="turnPlayer1(); averagePlayer1()">
+                        <label id="lblPointsPlayer1" class="lblPlayerPoints"></label>
+                    </div>
+                </div>
+            </div>
+            
+        </aside>
+
+        <main>
+            <div id="contInsideMain1" class="contInsideMain">
+                <label id="lblRunTo"></label>
+                <label id="lblMaxInnings"></label>
+            </div>
+            <div id="contInsideMain2" class="contInsideMain">
+                <img id="btnIncreaseInnings" src="Iconos/Omat/icon-up-330.png" class="imgBigButtons" onclick="increaseInnings(); averagePlayer1(); averagePlayer2()" alt="">
+                <label id="lblInnings">120</label>
+                <img id="btnDecreaseInnings" src="Iconos/Omat/icon-down-330.png" class="imgBigButtons" onclick="decreaseInnings(); averagePlayer1(); averagePlayer2()" alt="">
+            </div>
+            <div id="contInsideMain3" class="contInsideMain">
+                <img id="btnStartMatch" src="Iconos/Omat/icon-play-330.png" class="imgTimerButtons" onclick="startMatch()">
+                <img id="btnPause" src="Iconos/Omat/icon-pause-330.png" class="imgTimerButtons" onclick="pauseMatch()">
+                <img id="btnResume" src="Iconos/Omat/icon-resume-330.png" class="imgTimerButtons" onclick="resumeMatch()">
+                <img id="btnTimeout" src="Iconos/Omat/icon-timeout-330.png" class="imgTimerButtons">
+            </div>
+        </main>
+
+        <aside class="sideBarRight">
+            <div id="area2" class="contArea">
+                <div id="areaPlayer2" class="contPlayer">
+                <div id="cont11" class="cont"> 
+                    <label id="lblNamePlayer2" class="lblPlayerName"></label>
+                </div>
+                <div id="cont18" class="cont">
+                    <label id="lblInningsPlayer2" class="lblPlayerData"></label>
+                </div>
+                <div id="cont12" class="cont"> 
+                    <img id="btnIncreasePoints2" src="Iconos/Omat/icon-up-330.png" class="imgBigButtons" onclick="increasePoints2(); averagePlayer2()" alt="">
+                </div>
+                <div id="cont13" class="cont">
+                    <img id="imgBallPlayer2" class="imgBola" alt="">
+                    <label id="lblRunPlayer2" class="lblRun"></label>
+                </div>
+                <div id="cont14" class="cont"> 
+                    <img id="btnDecreasePoints2" src="Iconos/Omat/icon-down-330.png" class="imgBigButtons" onclick="decreasePoints2(); averagePlayer2()" alt="">
+                </div>
+                <div id="cont15" class="cont"> 
+                    <label id="lblHighestRunPlayer2" class="lblPlayerData"></label>
+                    <img src="Iconos/Omat/icon-star.svg" class="imgSmallIcons" alt="">
+                </div>
+                <div id="cont16" class="cont"> 
+                    <label id="lblAveragePlayer2" class="lblPlayerData"></label>
+                </div>
+                <div id="cont17" class="cont"> 
+                    <img src="Iconos/Omat/icon-timeout.svg" class="imgSmallIcons" alt="">
+                    <label id="lblTimeoutsPlayer2" class="lblPlayerData"></label>
+                </div>
+                <div id="cont20" class="cont" onclick="turnPlayer2(); averagePlayer2()"> 
+                    <label id="lblPointsPlayer2" class="lblPlayerPoints"></label>
+                </div>
+            </div>
+            
+            </div>
+        </aside>
+
+        <footer>
+            <div class="divLogo">
+                
+            </div>
+            <div class="divProgressBar">
+                <div class="progress">
+                    <div class="progressBar"></div>
+                </div>
+                <span id="lblSecondsRemaining">0</span>
+            </div>
+            <div class="divLogo">
+                <img id="imgBalls" src="Imagenes/Bolas.PNG" alt="">
+            </div>
+        </footer>
+    </div>
+
+    <script src="CaromScore2P.js"></script>
+    <script src="Script.js"></script>
+    <script src="Main.js"></script>
+</body>
+</html>

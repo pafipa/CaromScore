@@ -1,0 +1,407 @@
+:root {
+    --firstColor: #01467d;
+    --secondColor: #29abe2;
+    --thirdColor: #f5efe5;
+    --fourthColor: #f9d250;
+    --fifthColor: #013158;
+}
+
+body {
+    background-color: var(--firstColor);
+    font-family: 'Poppins','Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 15% 69% 15%;
+    grid-template-columns: 40% auto 40% ;
+    height: 98vh;
+}
+
+@media (max-width: 1000px) {
+    .grid{
+        grid-template-rows: 10% 30% auto 30% 10%;
+        grid-template-columns: 1fr;
+    }
+    aside,
+    main {
+        grid-column: 1 / 4;
+    }
+    .sideBarLeft,
+    .sideBarRight{
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+header{
+    background-color: none;
+}
+nav{
+    background-color: none;
+}
+aside{
+    background-color: none;
+}
+main{
+    background-color: none;
+}
+footer{
+    background-color: none;
+}
+
+header,
+nav,
+footer {
+    grid-column: 1 / 4;
+}
+
+header,
+footer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 5px;
+    gap: 20px;
+    border: 2px solid none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content:center;
+    padding: 20px;
+    gap: 20px;
+}
+
+aside,
+main{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+main{
+    justify-content: space-between;
+}
+
+.sideBarLeft{
+    align-items: end;
+}
+.sideBarRight{
+    align-items: start;
+}
+
+.sectionItemsVertical{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 40px;
+    width: 90%;
+    min-width: 400px;
+    max-width: 600px;
+    background-color: none;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sectionItemsHorizontal{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    height: auto;
+    min-height: 40px;
+    width: 90%;
+    background-color: #01467d;
+    border-radius: 10px;
+    justify-content:center;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+/*IMAGES & BUTTONS*/
+
+#imgCaromScore2P{
+    height: 5vw;
+    max-height: 140px;
+    min-height: 48px;
+}
+
+.imgBola{
+    width: 7vw;
+    cursor: pointer;
+}
+
+.imgSmallIcons{
+    height: 2.5vw;
+    margin: 0.5vw;
+}
+
+.imgBigButtons{
+    height: 5vw;
+    cursor: pointer;
+    min-height: 48px;
+}
+
+.imgTimerButtons{
+    height: 5vw;
+    cursor: pointer;
+    min-height: 48px;
+}
+
+
+
+/*PLAYERS --> ASIDES*/
+
+.contArea{
+    border: 1px solid none;
+    border-radius: 0.5vw;
+    display: flex;
+    height: 99%;
+    width: 99%;
+}
+
+.contPlayer{
+    display: grid;
+    height: 99%;
+    width: 99%;
+    border: 5px solid none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1px;
+    background-color: #013158;
+    margin: 0.2vw;
+}
+
+
+
+#areaPlayer1{
+    border-radius: 0.5vw;
+}
+
+#areaPlayer2{
+    border-radius: 0.5vw;
+}
+
+.cont{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#cont1{grid-area: 1/1/2/6; }
+#cont2{grid-area: 2/1/3/2; }
+#cont3{grid-area: 3/1/5/2; }
+#cont4{grid-area: 5/1/6/2; }
+#cont5{grid-area: 6/1/7/2; }
+#cont6{grid-area: 6/2/7/5; }
+#cont7{grid-area: 6/5/7/6; }
+#cont8{grid-area: 4/5/6/6; }
+#cont9{grid-area: 2/5/3/6; }
+#cont10{grid-area: 2/2/6/5; }
+
+#cont11{grid-area: 1/1/2/6; }
+#cont12{grid-area: 2/5/3/6; }
+#cont13{grid-area: 3/5/5/6; }
+#cont14{grid-area: 5/5/6/6; }
+#cont15{grid-area: 6/5/7/6; }
+#cont16{grid-area: 6/2/7/5; }
+#cont17{grid-area: 6/1/7/2; }
+#cont18{grid-area: 4/1/6/2; }
+#cont19{grid-area: 2/1/4/2; }
+#cont20{grid-area: 2/2/6/5; }
+
+.lblRun{
+    position:absolute;
+    font-size: 4vw;
+    font-weight: 600;
+    color: #01467d;
+}
+.lblPlayerName{
+    color: #f5efe5;
+    font-size: 2.5vw;
+    font-weight: 900;
+    text-align: center;
+}
+
+.lblPlayerPoints{
+    color: #f5efe5;
+    font-weight:900;
+    font-size: 20vw;
+    cursor: pointer;
+}
+
+.lblPlayerData{
+    color: #f5efe5;
+    font-size: 2.5vw;
+}
+
+#lblInnings{
+    color: #f5efe5;
+    font-weight:900;
+    font-size: 10vw;
+}
+
+#btnStopEdit{
+    visibility: visible;
+}
+
+
+
+/*HEADER*/
+
+.contInsideHeader{
+    background-color: none;
+    width: 30%;
+    height: 98%;
+    display: flex;
+}
+
+#contInsideHeader1{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#contInsideHeader2{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contInsideHeader3{
+    display: flex;
+    align-items: center;
+    justify-items:center;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+
+
+/*GAME DATA --> ASIDE*/
+
+#lblRunTo,
+#lblMaxInnings{
+    width: 90%;
+    background-color: none;
+    color: #f5efe5;
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+#lblMaxInnings{
+    font-size: 1.5vw;
+}
+
+#contInsideMain1{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #01467d;
+    height: 15%;
+    width: 98%;
+}
+
+#contInsideMain2{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #01467d;
+    height: auto;
+    
+}
+
+#contInsideMain3{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content:center;
+    gap: 4vw;
+    background-color: #01467d;
+    height: 15%;
+    width: 98%;
+}
+
+
+
+/*FOOTER*/
+
+.divProgressBar {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    border: 1px solid none;
+    align-items: center;
+}
+
+.progress {
+    height: 3vw;
+    background-image: linear-gradient(to left, red , orange, #F9d250, yellowgreen, yellowgreen, green);
+}
+
+.progressBar {
+    height: 100%;
+    background-color: black;
+    opacity: 0.75;
+    transition: width 1s linear;
+    /*transition: margin-right 1s ease-in-out;*/
+}
+
+#lblSecondsRemaining {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6vw;
+    height: 6vw;
+    font-size: 4vw;
+    color: white;
+    background-color: #013158; 
+    opacity: 0.9;
+    padding: 5px 5px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.divLogo {
+    width: 10%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid none;
+}
+
+#imgBalls{
+    height: 80%;
+    min-height: 80px;
+    cursor: pointer;
+}

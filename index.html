@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaromScore</title>
+    <link rel="stylesheet" href="Main.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="Favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="Favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicons/favicon-16x16.png">
+    <link rel="manifest" href="Favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <img id="imgCaromScore" src="Imagenes/CaromScore celeste.png" alt="">
+        </header>
+        <nav class="sectionHorizontal">
+                <div class="radioItem" id="contNumPlayers"><input name="numPlayers" id="radioTwoPlayers" value="2Players" type="radio" checked onclick="getNumPlayers()"><label for="radioTwoPlayers">2 players</label></div>
+                <div class="radioItem" id="contNumPlayers"><input name="numPlayers" id="radioThreePlayers" value="3Players" type="radio" onclick="getNumPlayers()"><label for="radioThreePlayers">3 players</label></div>
+                <div class="radioItem" id="contNumPlayers"><input name="numPlayers" id="radioFourPlayers" value="4Players" type="radio" onclick="getNumPlayers()"><label for="radioFourPlayers">4 players</label></div>
+                <div id="lblNumPlayers"></div>
+        </nav>
+
+        <aside class="sideBarLeft">
+            <div class="sectionItemsVertical">
+                <div class="slider">
+                    <img class="sliderIcons" src="Iconos/Omat/Amarillos/icon-target.png" alt="">
+                    <label class="sliderText" for="">run to</label>
+                    <input id="rangeRunTo" type="range" min="0" max="125" value="30" step="5" oninput="inRunTo.innerText = this.value">
+                    <p id="inRunTo">30</p>
+                </div>
+                <div class="slider">
+                    <img class="sliderIcons" src="Iconos/Omat/Amarillos/iconMaxInnings.png" alt="">
+                    <label class="sliderText" for="">innings</label>
+                    <input id="rangeMaxInnings" type="range" min="0" max="60" value="40" step="5" oninput="inMaxInnings.innerText = this.value">
+                    <p id="inMaxInnings">40</p>
+                </div>
+                <div class="slider">
+                    <img class="sliderIcons" src="Iconos/Omat/Amarillos/iconShottime.png" alt="">
+                    <label class="sliderText" for="">shot time</label>
+                    <input id="rangeShottime" type="range" min="0" max="60" value="40" step="5" oninput="inShottime.innerText = this.value">
+                    <p id="inShottime">40</p>
+                </div>
+                <div class="slider">
+                    <img class="sliderIcons" src="Iconos/Omat/Amarillos/iconMaxTimeouts.png" alt="">
+                    <label class="sliderText" for="">extensions</label>
+                    <input id="rangeMaxTimeouts" type="range" min="0" max="6" value="2" step="1" oninput="inMaxTimeouts.innerText = this.value">
+                    <p id="inMaxTimeouts">2</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <main></main>
+
+        <aside class="sideBarRight">
+            <div class="sectionItemsVertical">
+                <div class="sectionItem" id="contComingSoon">
+                    <label id="lblComingSoon" for="">Someday is coming!</label>
+                </div>
+                <div class="sectionItem" id="contNamePlayer1">
+                    <img id="imgBall1" class="iconsBalls" alt="">
+                    <input type="text" class="inputNames" id="inPlayer1" placeholder="Player 1">
+                    <input type="text" class="inputHcps" id="inHcp1" placeholder="Hcp">
+                </div>
+                <div class="sectionItem" id="contNamePlayer2">
+                    <img id="imgBall2" class="iconsBalls" alt="">
+                    <input type="text" class="inputNames" id="inPlayer2" placeholder="Player 2">
+                    <input type="text" class="inputHcps" id="inHcp2" placeholder="Hcp">
+                </div>
+                <div class="sectionItem" id="contNamePlayer3">
+                    <img id="imgBall3" class="iconsBalls" alt="">
+                    <input type="text" class="inputNames" id="inPlayer3" placeholder="Player 3">
+                    <input type="text" class="inputHcps" id="inHcp3" placeholder="Hcp">
+                </div>
+                <div class="sectionItem" id="contNamePlayer4">
+                    <img id="imgBall4" class="iconsBalls" alt="">
+                    <input type="text" class="inputNames" id="inPlayer4" placeholder="Player 4">
+                    <input type="text" class="inputHcps" id="inHcp4" placeholder="Hcp">
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <div id="footer1" class="contFooter">
+                <img id="imgBolas" src="Imagenes/Bolas.PNG" alt="" onclick="caromScoreNewGame()">
+            </div>
+            <div id="footer2" class="contFooter">
+                <img id="btnStartMatch" src="Iconos/Omat/icon-play-330.png" class="imgButtons" onclick="caromScoreNewGame()">
+            </div>
+        </footer>
+    </div>
+
+    <script src="Main.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>
