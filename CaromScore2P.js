@@ -109,7 +109,7 @@ function onLoadCaromScore2P(){
 function redirectToCaromScore() {
     
     if (confirm("Are you sure to exit?")) {
-        window.location.href = 'Main.html';
+        window.location.href = 'index.html';
     } else {
         txt = "You pressed Cancel!";
     }
