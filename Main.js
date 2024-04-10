@@ -133,8 +133,8 @@ function caromScoreNewGame () {
     newGame();
     getNumPlayers();
 
-    if (document.getElementById("lblNumPlayers").innerHTML == "2Players") {window.location.href = "https://carom-score-994rtoh77-pafipas-projects.vercel.app//CaromScore2p.html"}
-    else if (document.getElementById("lblNumPlayers").innerHTML == "3Players") {}
+    if (document.getElementById("lblNumPlayers").innerHTML == "2Players") {window.location.href = "caromscore2P.html"}
+    else if (document.getElementById("lblNumPlayers").innerHTML == "3Players") {} 
     else if (document.getElementById("lblNumPlayers").innerHTML == "3Players") {}
     
 }
