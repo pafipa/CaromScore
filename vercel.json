@@ -1,5 +1,3 @@
 {
-    "rewrites":  [
-        {"source": "/CaromScore2P.html", "destination": "https://caromscore.vercel.app/caromscore2P.html"}
-    ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
