@@ -1,5 +1,5 @@
 {
     "rewrites":  [
-        {"source": "/CaromScore2P", "destination": "/CaromScore2P.html"}
+        {"source": "CaromScore2P", "destination": "CaromScore2P.html"}
     ]
 }
