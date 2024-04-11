@@ -369,6 +369,6 @@ input[type=number]:focus {
 }
 
 #lblComingSoon{
-    font-size: 2vw;
+    font-size: 0.1vw;
     color: var(--fourthColor);
 }
